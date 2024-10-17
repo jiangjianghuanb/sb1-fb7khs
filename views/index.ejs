@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自动PPT生成器</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>自动PPT生成器</h1>
+        <form id="pptForm">
+            <div class="form-group">
+                <label for="theme">主题：</label>
+                <input type="text" id="theme" name="theme" required>
+            </div>
+            <div class="form-group">
+                <label for="template">模板：</label>
+                <select id="template" name="template" required>
+                    <option value="modern">现代</option>
+                    <option value="classic">经典</option>
+                    <option value="minimalist">简约</option>
+                    <option value="creative">创意</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="file">上传文件（DOCX 或 TXT）：</label>
+                <input type="file" id="file" name="file" accept=".docx,.txt" required>
+            </div>
+            <button type="submit">生成PPT</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
